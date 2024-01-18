@@ -8,4 +8,5 @@ class MovieDataProviders @Inject constructor(
 ) {
 
     suspend fun getMovieList(apiKey:String, query:String) = apiService.getMovieList(apiKey,query)
+    suspend fun getMovieDetails(id:String,apiKey:String) = apiService.getMovieDetails(id,apiKey)
 }
