@@ -9,8 +9,14 @@ import com.core.common.navigation_constants.MovieFeature
 fun AppNavGraph(navController: NavHostController
 ,navigationProvider: NavigationProvider){
     NavHost(navController = navController, startDestination = MovieFeature.nestedRoute){
+
         navigationProvider.movieApi.registerGraph(
             navController, this
         )
+
+        navigationProvider.movieDetailsApi.registerGraph(
+            navController,this
+        )
+
     }
 }

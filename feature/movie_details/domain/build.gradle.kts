@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -33,6 +35,10 @@ android {
 }
 
 dependencies {
+
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation(project(":core:common"))
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

@@ -53,9 +53,15 @@ android {
 
 dependencies {
 
+    //implementation project(":feature:movie_details:domain")
     implementation(project(mapOf("path" to ":feature:movie:ui")))
     implementation(project(mapOf("path" to ":feature:movie:domain")))
     implementation(project(mapOf("path" to ":feature:movie:data")))
+
+    implementation(project(mapOf("path" to ":feature:movie_details:ui")))
+    implementation(project(mapOf("path" to ":feature:movie_details:domain")))
+    implementation(project(mapOf("path" to ":feature:movie_details:data")))
+
     implementation(project(mapOf("path" to ":core:common")))
     implementation(project(mapOf("path" to ":core:feature_api")))
 

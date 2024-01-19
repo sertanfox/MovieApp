@@ -18,7 +18,7 @@ internal object InternalMovieFeatureApi : FeatureApi {
             route = MovieFeature.nestedRoute){
             composable(MovieFeature.movieScreenRoute){
                 val viewModel = hiltViewModel<MovieSearchViewModel>()
-                MovieScreen(viewModel)
+                MovieScreen(viewModel, navController)
             }
         }
     }

@@ -20,6 +20,6 @@ interface ApiService {
     @GET("movie/{id}")
     suspend fun getMovieDetails(
         @Path("id") id:String,
-        @Path("api_key") apiKey:String
+        @Query("api_key") apiKey:String
     ):MovieDetailsDto
 }
